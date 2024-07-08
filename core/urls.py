@@ -12,5 +12,5 @@ urlpatterns = [
     path('profile/<str:pk>',profile,name='profile'),
     path('follow',follow,name='follow'),
     path('search',search,name='search'),
-
+    path('delete/<str:pk>/<str:usr>',delete_post,name='delete_post'),
 ]

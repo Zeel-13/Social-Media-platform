@@ -8,6 +8,11 @@ from itertools import chain
 import random
 # Create your views here.
 
+@login_required(login_url='signin')
+def delete_post(request,pk,usr):
+    post=Post.objects.get(id=pk)
+    post.delete()
+    return redirect('/profile/'+usr)
 
 @login_required(login_url='signin')
 def search(request):

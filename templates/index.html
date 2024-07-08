@@ -143,8 +143,9 @@
                                     
                                     <span class="block capitalize font-semibold "><a href="/profile/{{post.user}}">@{{post.user}}</a></span>
                                 </div>
-                              <div>
+                              {% comment %} <div>
                                 <a href="#"> <i class="icon-feather-more-horizontal text-2xl hover:bg-gray-200 rounded-full p-2 transition -mr-1 "></i> </a>
+                                {% if post.user == request.user %}
                                 <div class="bg-white w-56 shadow-md mx-auto p-2 mt-12 rounded-md text-gray-500 hidden text-base border border-gray-100  " uk-drop="mode: hover;pos: top-right">
                               
                                     <ul class="space-y-1">
@@ -156,7 +157,8 @@
                                     </ul>
                                 
                                 </div>
-                              </div>
+                                {% endif %}
+                              </div> {% endcomment %}
                             </div>
     
                             <div uk-lightbox>

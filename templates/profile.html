@@ -110,6 +110,9 @@
 										<li>
 											<a class="strip" href="{{post.image.url}}" title="" data-strip-group="mygroup" data-strip-group-options="loop: false">
 												<img src="{{post.image.url}}" style="height: 250px; width: 300px;" alt=""></a>
+												{% if request.user == user_profile.user %}
+												<a href="/delete/{{post.id}}/{{user_profile.user.username}}" class="btn-danger text-center">Delete</a>
+												{% endif %}
 										</li>
 										{% endfor %}
 										
