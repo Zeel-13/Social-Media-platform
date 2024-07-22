@@ -8,7 +8,6 @@ urlpatterns = [
     path('logout',logout_user,name='logout_user'),
     path('setting',setting,name='setting'),
     path('upload',upload,name='upload'),
-    path('like_post',like_post,name='like_post'),
     path('profile/<str:pk>',profile,name='profile'),
     path('follow',follow,name='follow'),
     path('search',search,name='search'),
